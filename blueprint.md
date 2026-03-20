@@ -7,21 +7,20 @@ This project is a classic memory card game where the player flips cards to find 
 ## Design and Features
 
 ### Visual Design
-*   **Theme:** A clean and modern design with a playful feel.
-*   **Colors:** A vibrant color palette will be used for the cards and background.
-*   **Typography:** Clear and readable fonts for game status and scores.
-*   **Layout:** A responsive grid layout for the card board that adapts to different screen sizes.
-*   **Animations:** Smooth card flip animations.
+*   **Theme:** "Cosmic Glass" - A modern, dark-themed aesthetic with glassmorphism effects.
+*   **Colors:** Deep blue/purple gradients for the background, semi-transparent white for glass elements, and neon accents (pink/cyan).
+*   **Typography:** 'Poppins', sans-serif for a clean, geometric look.
+*   **Layout:** Centered, responsive grid.
+*   **Visual Effects:**
+    *   Glassmorphism (backdrop-filter: blur) for the game board and cards.
+    *   Soft glowing shadows.
+    *   Smooth transitions and hover effects.
 
 ### Gameplay Features
-*   A deck of cards with matching pairs of images or symbols.
-*   Cards are shuffled and laid out face down.
-*   Players flip two cards at a time.
-*   If the cards match, they remain face up.
-*   If they don't match, they are flipped back down.
-*   A "moves" counter to track the number of attempts.
-*   A timer to track the game duration.
-*   A restart button to start a new game.
+*   **Card Content:** High-quality matching emojis instead of letters.
+*   **Feedback:** Visual cues for matches and mismatches.
+*   **Win State:** A celebratory overlay or modal when the game is won.
+*   **Responsive:** Grid adjusts columns based on screen width.
 
 ## Current Plan
 

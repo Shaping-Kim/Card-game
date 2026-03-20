@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Card Game</title>
+    <title>Cosmic Memory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="game-container">
-        <h1>Memory Card Game</h1>
-        <div class="score-panel">
-            <span class="moves">Moves: 0</span>
-            <span class="timer">Time: 0s</span>
-        </div>
-        <div class="game-board"></div>
-        <button class="restart-btn">Restart</button>
+    <div class="app-container">
+        <header>
+            <h1>Cosmic Memory</h1>
+        </header>
+
+        <!-- Using the Web Component -->
+        <memory-game></memory-game>
+
+        <footer>
+            <p>Match all pairs to win!</p>
+        </footer>
     </div>
+
     <script src="main.js"></script>
 </body>
 </html>

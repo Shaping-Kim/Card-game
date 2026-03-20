@@ -1,3 +1,9 @@
+:root {
+    --text-color: #ffffff;
+    --font-main: 'Poppins', sans-serif;
+    --accent-glow: 0 0 20px rgba(0, 255, 204, 0.4);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,89 +11,52 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+    font-family: var(--font-main);
+    background: #0f2027; 
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    color: var(--text-color);
+    overflow-y: auto; /* Allow scroll on mobile */
+    overflow-x: hidden;
 }
 
-.game-container {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+header {
     text-align: center;
+    width: 100%;
 }
 
 h1 {
-    margin-bottom: 20px;
-    color: #333;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(to bottom, #fff, #999);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.score-panel {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    font-size: 1.2em;
+footer {
+    opacity: 0.6;
+    font-size: 0.9rem;
+    margin-top: 1rem;
 }
 
-.game-board {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    perspective: 1000px;
-}
-
-.card {
-    width: 100px;
-    height: 140px;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
-    cursor: pointer;
-}
-
-.card.flip {
-    transform: rotateY(180deg);
-}
-
-.card-face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.card-front {
-    background-color: #4a90e2;
-    color: white;
-}
-
-.card-back {
-    background-color: #f7f7f7;
-    transform: rotateY(180deg);
-}
-
-.restart-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #4a90e2;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.restart-btn:hover {
-    background-color: #357abd;
+/* Global modal backdrop if needed, though we can put it in the component */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
